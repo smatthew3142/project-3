@@ -1,17 +1,17 @@
 const router = require("express").Router();
-const animalsController = require("../../controllers/animalsController");
+const ecosController = require("../../controllers/ecos");
+const animalController = require("../../controllers/animalsController");
 
-// Matches with "/api/animals"
-router.route("/")
-  .get(animalsController.findAll)
-  .post(animalsController.create);
-
-// Matches with "/api/animals/:id"
+// Calling the scrape route
 router
-  .route("/:id")
-  .get(animalsController.findById)
-  .put(animalsController.update)
-  .delete(animalsController.remove);
+  .route("/scrape")
+  .get(ecosController.scrape);
+
+router
+  .route("/all")
+  .get(animalController.findAll)
+
 
 module.exports = router;
+
 
