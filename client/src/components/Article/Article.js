@@ -14,7 +14,7 @@ export const Article = props => (
     <a href={props.url} className="list-group-item list-group-item-action flex-column align-items-start active" target="_blank">
       <div className="grow d-flex w-100 justify-content-between">
         <h4 className="mb-1">{props.title}</h4>
-        <small className="date">{moment(props.date).format("dddd, MMMM Do YYYY")}</small>
+        
       </div>
     </a>
     <ListItem  className="list-group-item">
