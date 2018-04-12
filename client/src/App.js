@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Articles from "./pages/Articles";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import Start from"./pages/Start";
+import Start from "./pages/Start";
 
 const App = () => 
 
