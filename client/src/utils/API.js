@@ -1,25 +1,16 @@
 import axios from "axios";
 
 export default {
-  
-  getArticles: function() {
-    return axios.get("/api/articles");
+  // Gets all animals from db
+  getAnimals: function() {
+    return axios.get("/api/animals");
   },
-  
-  getArticle: function(id) {
-    return axios.get("/api/articles/" + id);
+  // Gets the animals with the given id
+  getAnimal: function(id) {
+    return axios.get("/api/animals/" + id);
   },
- 
-  deleteArticle: function(id) {
-    return axios.delete("/api/articles/" + id);
-  },
-  
-  saveArticle: function(articleData) {
-    return axios.post("/api/articles", articleData);
-  },
-  queryArticles: function(queryUrl) {
-    return axios.get(queryUrl);
+  // Deletes an animal with a given id
+  deleteAnimal: function(id) {
+    return axios.delete("/api/animals/" + id);
   }
 };
-
-

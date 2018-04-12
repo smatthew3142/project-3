@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "build": "^0.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-materialize": "^2.1.2",
