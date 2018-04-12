@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
 import API from "../../utils/API";
@@ -47,3 +48,4 @@ class Animals extends Component {
 }
 
 export default Animals;
+

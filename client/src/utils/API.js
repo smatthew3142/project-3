@@ -14,3 +14,4 @@ export default {
     return axios.delete("/api/animals/" + id);
   }
 };
+
