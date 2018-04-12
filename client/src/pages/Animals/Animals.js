@@ -1,19 +1,11 @@
-// import React, { Component } from "react";
-// import { Col, Row, Container } from "react-materialize";
-// import API from "../../utils/API";
-// import { Article } from "../../components/Article";
-// import { Jumbotron } from "../../components/Jumbotron";
-// import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
-// import { CardPanel } from "react-materialize";
-
 
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Article";
+import { Col, Row, Container } from "react-materialize";
 import API from "../../utils/API";
 
 class Animals extends Component {
   state = {
-    animals: []
+    animalsArr: []
   };
 
   componentDidMount() {
@@ -22,7 +14,7 @@ class Animals extends Component {
 
   loadAnimals = () => {
     API.getAnimals()
-      .then(res => this.setState({ animals: res.data }))
+      .then(res => this.setState({ animalsArr: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -32,13 +24,13 @@ class Animals extends Component {
         <Row>
           <Col size="md-6 sm-12">
               <h1>Animals In the List</h1>
-            {this.state.animals.length ? (
+            {this.state.animalsArr.length ? (
 
-                this.state.animals.map(book => (
-                  <li key={animals._id}>
-                    <a href={"/animals/" + animals._id}>
+                this.state.animalsArr.map(animal => (
+                  <li key={animal._id}>
+                    <a href={"/animals/" + animal._id}>
                       <strong>
-                        {animals.scientificName} by {animals.commonName}
+                        {animal.scientificName} by {animal.commonName}
                       </strong>
                     </a>
 

@@ -1,7 +1,7 @@
 module.exports = {
 	
-	User: require("./user"),
+	User: require("./User"),
 	Animal: require("./Animal"),
-	Charity: require("./charity")
+	Charity: require("./Charity")
 };
 

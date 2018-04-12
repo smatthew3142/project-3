@@ -6,9 +6,9 @@ import "./Nav.css";
 const Nav = () => (
 
   <Navbar className= "nav  grey darken-1" right style={{position: 'fixed', zIndex: 10}}>
-  <a href="/" className="brand-logo center">The New York Times Article Search</a>
+  <a href="/" className="brand-logo center">Endangered Species Information</a>
   <NavItem href='/'>Home</NavItem>
-  <NavItem href='#savedArticleCard'>Saved Articles</NavItem>
+  <NavItem href='#'>Saved Animals</NavItem>
 </Navbar>
 );
 

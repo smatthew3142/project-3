@@ -9,7 +9,7 @@ router
   .get(animalsController.findAll)
 
   router
-  .route("/all")
+  .route("/animals")
   .get(animalsController.findAll)
 
 // Matches with "/api/animals/:id"
@@ -25,5 +25,3 @@ router
 
 
 module.exports = router;
-
-
