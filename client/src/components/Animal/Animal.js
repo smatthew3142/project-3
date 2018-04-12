@@ -1,12 +1,11 @@
 import React from 'react';
-import moment from 'moment';
 import { ListItem } from '../List';
 import { CardPanel, Button } from "react-materialize";
-import "./Article.css";
+import "./Animal.css";
 
 
 
-export const Article = props => (
+export const Animal = props => (
 
   <CardPanel className="grey lighten-3">
 
