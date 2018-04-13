@@ -5,10 +5,12 @@ import "./Nav.css";
 
 const Nav = () => (
 
-  <Navbar className= "nav  grey darken-1" right style={{position: 'fixed', zIndex: 10}}>
+  <Navbar className= "nav  grey darken-1">
   <a href="/" className="brand-logo center">Endangered Species Information</a>
-  <NavItem href='/'>Home</NavItem>
-  <NavItem href='#'>Saved Animals</NavItem>
+  <div className="listwrapper">
+    <NavItem href='/'>Home</NavItem>
+    <NavItem href='#'>Saved Animals</NavItem>
+  </div>
 </Navbar>
 );
 

@@ -1,9 +1,11 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
+import Search from "../../components/Search";
 
 
 const Start = () =>
 <Container fluid>
+  <Row>
    <Row className = 'slider' >
        <Col l={12}>
             <ul className = 'slides'>
@@ -41,7 +43,12 @@ const Start = () =>
             </li>
 					</ul>
 				</Col>
-			</Row>
+      </Row>
+      <Row>
+          <Search/>
+      </Row>
+
+  </Row>
 	</Container>;
 
 

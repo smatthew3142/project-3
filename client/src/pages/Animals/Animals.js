@@ -23,18 +23,16 @@ class Animals extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6 sm-12">
-              <h1>Animals In the List</h1>
+              <h2>Animals In the List</h2>
             {this.state.animalsArr.length ? (
 
                 this.state.animalsArr.map(animal => (
-                  <li key={animal._id}>
-                    <a href={"/animals/" + animal._id}>
-                      <strong>
-                        {animal.scientificName} by {animal.commonName}
-                      </strong>
-                    </a>
-
-                  </li>
+                  <ul>
+                     <li key={animal._id}><a href={animal.link}>
+                        {animal.scientificName}</a></li>
+                      <li>{animal.commonName}</li>
+                      <li>{animal.status}</li>
+                  </ul>
                 ))
 
             ) : (
