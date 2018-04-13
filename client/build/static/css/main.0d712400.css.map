@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/Nav/Nav.css"],"names":[],"mappings":"AAAA,KACC,kBACA,wBAA6B,CAG9B,YACC,8BAAmC","file":"static/css/main.0d712400.css","sourcesContent":[".nav {\n\tpadding-left: 10px;\n\tfont-family: 'Buda', cursive;\n}\n\n.brand-logo {\n\tfont-family: 'Cormorant SC', serif;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/components/Nav/Nav.css"],"sourceRoot":""}
