@@ -43,6 +43,9 @@ const Start = () =>
                   <div className= "caption center-align">
                     <h3>Post 4</h3>
                     <h5 className="light grey-text text-lighten-3">Here’s our small slogan.</h5>
+                  </div>
+                </li>
+              </ul>
             </div>
           </Col>
         </Row>
