@@ -5,11 +5,11 @@ import "./Nav.css";
 
 const Nav = () => (
 
-  <Navbar className= "nav  grey darken-1">
-  <a href="/" className="brand-logo center">Endangered Species Information</a>
+  <Navbar className= "nav  brown darken-3">
+  <a href="/" className="brand-logo center valign-wrapper"><img src="/assets/images/icon/64x64.png" alt="logoimg" className="logoImg"/>Animal Tracks</a>
   <div className="listwrapper">
     <NavItem href='/'>Home</NavItem>
-    <NavItem href='#'>Saved Animals</NavItem>
+    <NavItem href='#'>Favorites</NavItem>
   </div>
 </Navbar>
 );

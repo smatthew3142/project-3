@@ -1,28 +1,39 @@
 import React from "react";
+import "./Form.css";
+import { Col, Row, Container } from "react-materialize";
+import { Button } from "react-materialize";
 
 const Input = props =>
-  <div className="row">
-    <div className="col-sm-12">
-      <form>
-        <div className="form-group">
-          <input
-            type="text"
-            className="form-control"
-            name="searchInput"
-            placeholder="Search by Animals Common Name"
-            value={props.searchTerm}
-            onChange={props.handleInputChange}
-           />
-           <button type ="submit" 
-                    className="btn btn-secondary" 
-                    onClick={props.handleFormSubmit}>Search</button>
-        </div>
-          
-            
+<Container>
+  <Row>
+    <Col s={12} className="center-align">
+      <Row className="searchBar">
+        <form>
 
-          </form>
+          <div className="form-group">
+          <Col s={9} className="inputSearch">
+            <input
+              type="text"
+              className="form-control z-depth-4"
+              name="searchInput"
+              placeholder="Search by Animal's Common Name"
+              value={props.searchTerm}
+              onChange={props.handleInputChange}
+             />
+             </Col>
+             <Col s={3}>
+                <Button waves='light' type ="submit" className="btn z-depth-5 brown darken-1" 
+                      onClick={props.handleFormSubmit}>Search</Button>
+              </Col>
           </div>
-        </div>
+            
+              
+
+            </form>
+            </Row>
+        </Col>
+  </Row>
+  </Container>
 
 
 

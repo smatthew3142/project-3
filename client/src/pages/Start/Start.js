@@ -25,6 +25,18 @@ const Start = () =>
                 <li>
                   <img src="/assets/images/polarbear.jpg"  alt="polarbear" /> 
                 </li>
+                <li>
+                  <img src="/assets/images/elephant.jpg"  alt="elephant" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/macaw.jpg"  alt="macaw" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/dolphin.jpg"  alt="dolphin" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/rhino.jpg"  alt="rhino" /> 
+                </li>
               </ul>
             </div>
           </Col>
