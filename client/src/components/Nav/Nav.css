@@ -4,7 +4,7 @@
 
 .brand-logo {
 	font-family: 'Trade Winds', cursive;
-	height: 50px;
+	font-size: 48px !important;
 
 }
 
@@ -16,6 +16,6 @@
 	width: 60px;
 	margin-right: 15px;
 	margin-top: 3px;
-	vertical-align: text-bottom;
+	vertical-align: text-top;
 
 }
