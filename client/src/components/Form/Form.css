@@ -15,8 +15,9 @@ background-color: rgba(0, 0, 0, 0.3);
  }
 
 
-.btn {
+.searchBtn {
 
 	margin-top: 10px;
+	font-size: auto;
 }
  

@@ -9,6 +9,11 @@ const charitySchema = new Schema({
 
   commonName: { 
     type: Array
+   },
+
+   link: {
+   		type: String,
+    	Required: true
     }
 
 });

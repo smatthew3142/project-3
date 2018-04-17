@@ -23,8 +23,8 @@ const Input = props =>
              />
              </Col>
              <Col s={3}>
-                <Button waves='light' type ="submit" className="btn z-depth-5 brown darken-1" 
-                      onClick={props.handleFormSubmit}><Icon>pets</Icon>Search</Button>
+                <Button waves='light' type ="submit" className="searchBtn z-depth-5 brown darken-1" 
+                      onClick={props.handleFormSubmit}><Icon tiny>pets</Icon>Search</Button>
               </Col>
           </div>
             
