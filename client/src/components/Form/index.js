@@ -2,6 +2,7 @@ import React from "react";
 import "./Form.css";
 import { Col, Row, Container } from "react-materialize";
 import { Button } from "react-materialize";
+import { Icon } from "react-materialize";
 
 const Input = props =>
 <Container>
@@ -23,7 +24,7 @@ const Input = props =>
              </Col>
              <Col s={3}>
                 <Button waves='light' type ="submit" className="btn z-depth-5 brown darken-1" 
-                      onClick={props.handleFormSubmit}>Search</Button>
+                      onClick={props.handleFormSubmit}><Icon>pets</Icon>Search</Button>
               </Col>
           </div>
             
