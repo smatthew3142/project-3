@@ -4,6 +4,7 @@ import Animals from "./pages/Animals";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Start from "./pages/Start";
+import Welcome from "./pages/Welcome/Welcome"
 
 const App = () => 
 
@@ -13,8 +14,9 @@ const App = () =>
   	<Nav />
   	<Switch>
 		  <Route exact path="/" component={Start} />
-			<Route exact path="/animals" component={Animals} />
-  		<Route component={NoMatch} />
+		  <Route exact path="/login" component={Welcome} />
+		  <Route exact path="/animals" component={Animals} />
+  		  <Route component={NoMatch} />
   	</Switch>
   </div>
  </Router>;

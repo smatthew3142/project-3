@@ -10,6 +10,7 @@ const Nav = () => (
   <div className="listwrapper">
     <NavItem href='/'>Home</NavItem>
     <NavItem href='#'>Favorites</NavItem>
+    <NavItem href="/login">Login</NavItem>
   </div>
 </Navbar>
 );

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const ecosController = require("../../controllers/ecos");
 const animalsController = require("../../controllers/animalsController");
+const userController = require("../../controllers/userController")
 
 // Calling the scrape route
 
@@ -22,6 +23,11 @@ router
   router
   .route("/scrape")
   .get(ecosController.scrape);
+
+
+router
+.route("/login")
+.get(userController.findAll);
 
 
 module.exports = router;
