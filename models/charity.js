@@ -7,13 +7,9 @@ const charitySchema = new Schema({
     Required: true
   },
 
-  animalType: { 
+  commonName: { 
     type: Array
-    },
-
-  region: {
-    type: Array
-  }
+    }
 
 });
 
