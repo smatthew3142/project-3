@@ -27,8 +27,6 @@ const Input = props =>
                       onClick={props.handleFormSubmit}><Icon tiny>pets</Icon>Search</Button>
               </Col>
           </div>
-            
-              
 
             </form>
             </Row>
