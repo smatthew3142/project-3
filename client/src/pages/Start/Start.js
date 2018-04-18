@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
-import "./Start.css";
 import Search from "../../components/Search";
 
 

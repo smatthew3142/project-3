@@ -2,25 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const charitySchema = new Schema({
-  title: { 
+  title: {
     type: String,
-     required: true 
-    },
+    Required: true
+  },
 
-  animalType: { 
-    type: "array",
-    "items": {
-           "type": "string"
-          } 
-    },
-
-  region: {
-    type: "array",
-    "items": {
-           "type": "string"
-          } 
-  }
+  commonName: { 
+    type: Array
+    }
 
 });
 
 const Charity = mongoose.model("Charity", charitySchema);
+
+module.exports = Charity;

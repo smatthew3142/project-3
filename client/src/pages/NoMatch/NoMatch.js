@@ -1,12 +1,14 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
+import "./NoMatch.css";
 
 const NoMatch = () =>
-  <Container fluid>
+  <Container fluid className="mainContent">
     <Row>
       <Col l={12}>
-        
-          <h1>404 Page Not Found</h1>
+    
+          <h1>404: Sorry. Page Not Found!</h1>
+
       </Col>
     </Row>
    
