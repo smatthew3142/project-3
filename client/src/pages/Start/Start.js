@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
-import Search from "../../components/Search";
 
 
 const Start = () =>
@@ -40,9 +39,6 @@ const Start = () =>
             </div>
           </Col>
         </Row>
-      <Row>
-          <Search/>
-      </Row>
 
   </Row>
 	</Container>;

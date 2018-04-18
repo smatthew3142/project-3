@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
 import API from "../../utils/API";
 import { Button } from "react-materialize";
+import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
+import { CardPanel } from "react-materialize";
+import { Animal } from "../../components/Animal";
 
 
 class Animals extends Component {
   state = {
-    searchTerm: 'bear',
+    searchTerm: '',
     page: '0',
     results: [],
     previousSearch: {},
@@ -14,34 +17,6 @@ class Animals extends Component {
     savedAnimals: []
   };
 
-  saveAnimal = (animal) => {
-
-    let newAnimal = {
-      commonName: "",
-      sciName: "",
-      state: ""
-    }
-
-    API.saveAnimal(newAnimal)
-      .then(res => this.loadAnimals())
-      .catch(err => console.log(err));
-  };
-
-  deleteAnimal = (id) => {
-    API.deleteAnimal(id)
-      .then(results => {
-        let savedAnimals = this.state.savedAnimals.filter(animal => animal._id !== id);
-        this.setState({ savedArticles: savedAnimals });
-        this.loadArticles();
-      })
-      .catch(err => console.log(err));
-  };
-
-  loadAnimals = () => {
-    API.getAnimals()
-      .then(res => this.setState({ animalsArr: res.data }))
-      .catch(err => console.log(err));
-  };
 
   getAnimals = (query) => {
     if (query.searchTerm !== this.state.previousSearch.searchTerm) {
@@ -70,18 +45,19 @@ class Animals extends Component {
       .catch(function (err) {
         console.log(err);
       });
+    }
 
-    API.queryAnimals(queryURL)
-      .then(results => {
-        this.setState();
-      });
-
+    handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
   };
 
   handleFormSubmit = event => {
         event.preventDefault();
-        let { commonName, sciName, state } = this.state;
-        let query = { commonName };
+        let { searchTerm } = this.state;
+        let query = { searchTerm };
         this.getAnimals(query);
     };
 
@@ -100,17 +76,58 @@ class Animals extends Component {
         <Container fluid>
           <Row>
             <Col size="md-6 sm-12">
-            <Button
-                    className="submitButton"
-                    onClick={this.getAnimals}
-                    type='info'
-                    >Submit
-            </Button>
-              
-            </Col>
-          </Row>
-        </Container>
-      );
-    }
-  };
+            <Form>
+              <FormGroup>
+                <Label htmlFor="searchTerm">Enter a Keyword:</Label>
+                <Input
+                onChange={this.handleInputChange}
+                name='searchTerm'
+                value={this.state.searchTerm}
+                placeholder='Search'
+                />
+              </FormGroup>
+  
+              <FormBtn
+                className="submitButton"
+                disabled={!(this.state.searchTerm)}
+                onClick={this.handleFormSubmit}
+                type='info'
+                >Submit
+              </FormBtn>
+            </Form>
+          </Col>
+        </Row>
+        <Row>
+            <Col l={12}>
+
+            { this.state.noAnimals ?
+              (<h1>Sorry. No animals here!</h1>) :
+              this.state.results.length>0 ? (
+                <Row>
+                  <CardPanel className="grey darken-1">
+                    <h4 className="white-text">Results</h4>
+
+                    {
+                      this.state.results.map((animal, i) => (
+                          <Animal
+         
+                          />
+                        )
+                      )
+                    }
+                    </CardPanel>
+
+                    <div className="moreButton" style={{margin: "0 auto", width: "180px"}}>
+                      <FormBtn additional='btn-block' onClick={this.moreArticles}>See More</FormBtn>
+                    </div>
+                </Row>
+              ) : ''
+            }
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
+
   export default Animals;

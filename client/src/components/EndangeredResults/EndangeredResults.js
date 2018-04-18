@@ -4,8 +4,8 @@ import { ListItem } from "../List";
 
 const EndangeredResults = ({ _id,link,scientificName,commonName,status}) => (
        <ListItem>
-          <a href={link} target="_blank">{scientificName}</a><br/>
-          {commonName}<br/>
+          <a href={link} target="_blank">{commonName}</a><br/>
+        
           {status}<br/>
       </ListItem>
 
