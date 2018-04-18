@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
-import API from "../../utils/API";
-import { Button } from "react-materialize";
 import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
 import { CardPanel } from "react-materialize";
 import { Animal } from "../../components/Animal";
