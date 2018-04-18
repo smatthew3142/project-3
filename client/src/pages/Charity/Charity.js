@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
 import API from "../../utils/API";
 import {List, ListItem } from "../../components/List";
+import "./charity.css";
 
 
   class Charity extends Component {
@@ -34,10 +35,11 @@ import {List, ListItem } from "../../components/List";
             <List>
               {this.state.Charities.map(Charity =>(
                 <ListItem>
+                      <div className="imgStyle"><img className="charityLogo" alt="logo" src={Charity.imageLink}/></div>
                       <p>{Charity.title} <br />
-                         {Charity.link} <br/> 
-                         |{Charity.commonName}
-                      </p>
+                      <a href = {Charity.link}>Click Here to Donate</a> <br/> </p>
+                      <p>This Organization supports the following Endangered Species:<br/>  
+                         {Charity.commonName.reduce((prev, curr) => [prev, ", ", curr])}</p>
                 </ListItem>
               ))}
             </List>   

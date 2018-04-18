@@ -1,5 +1,8 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
+import { Button } from "react-materialize";
+import "./Start.css";
+
 
 
 const Start = () =>
@@ -38,6 +41,9 @@ const Start = () =>
               </ul>
             </div>
           </Col>
+        </Row>
+        <Row>
+        <a href='/animals'><Button waves='light' type="button" className="startSearch brown darken-3">Start Your Search</Button></a>
         </Row>
 
   </Row>
