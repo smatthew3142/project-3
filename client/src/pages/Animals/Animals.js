@@ -10,43 +10,42 @@ import { Animal } from "../../components/Animal";
 class Animals extends Component {
   state = {
     searchTerm: '',
-    page: '0',
-	results: [],
-	info: [],
+  results: [],
+  info: [],
     previousSearch: {},
     noneFound: false,
     savedAnimals: []
   };
 
 
-	getAnimals = (query) => {
-		if (query.searchTerm !== this.state.previousSearch.searchTerm) {
-			this.setState({ results: [] });
-		}
-		let { searchTerm } = query;
+  getAnimals = (query) => {
+    if (query.searchTerm !== this.state.previousSearch.searchTerm) {
+      this.setState({ results: [] });
+    }
+    let { searchTerm } = query;
 
 
-		let queryURL = `eol.org/api/search/1.0.json?q=`;
+    let queryURL = `http://eol.org/api/search/1.0.json?q=`;
 
-		if (searchTerm.indexOf(' ') >= 0) {
-			searchTerm = searchTerm.replace(/\s/g, '+');
-		}
+    if (searchTerm.indexOf(' ') >= 0) {
+      searchTerm = searchTerm.replace(/\s/g, '+');
+    }
 
-		if (searchTerm) {
-			queryURL += searchTerm + '&page=1';
-		}
+    if (searchTerm) {
+      queryURL += searchTerm + '&page=1';
+    }
 
-		fetch(queryURL)
-			.then(function (res) {
-				return res.json();
-			})
-			.then(function (json) {
-				console.log(json);
-			})
-			.catch(function (err) {
-				console.log(err);
-			});
-	};
+    fetch(queryURL)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (json) {
+        console.log(json);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  };
 
     handleInputChange = event => {
     const { name, value } = event.target;
@@ -61,16 +60,6 @@ class Animals extends Component {
         let query = { searchTerm };
         this.getAnimals(query);
     };
-
-  moreAnimals = () => {
-    let { searchTerm } = this.state.previousSearch;
-    let query = { searchTerm };
-    let page = this.state.page;
-    page++;
-    this.setState({ page: page }, function () {
-      this.getAnimals(query);
-    });
-  };
 
     render() {
       return (

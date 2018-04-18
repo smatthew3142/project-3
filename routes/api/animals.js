@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const animalsController = require("../../controllers/animalsController");
 
-// Calling the scrape route
 
 router
   .route("/")
