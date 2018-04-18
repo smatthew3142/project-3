@@ -5,6 +5,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Start from "./pages/Start";
 import EndangeredAnimals from "./pages/EndangeredAnimals";
+import Charity from "./pages/Charity";
 
 
 const App = () => 
@@ -17,8 +18,8 @@ const App = () =>
 		  <Route exact path="/" component={Start} />
 		  <Route exact path="/animals" component={Animals} />
 		  <Route exact path="/endangered" component={EndangeredAnimals} />
-  		<Route component={NoMatch} />
-  		
+  		<Route exact path="/charity" component={Charity} />
+      <Route component={NoMatch} />
   	</Switch>
   </div>
  </Router>;

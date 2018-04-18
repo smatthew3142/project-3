@@ -12,9 +12,9 @@ export default {
   getAnimal: function(id) {
     return axios.get("/api/animals/" + id);
   },
-  // Deletes an animal with a given id
-  deleteAnimal: function(id) {
-    return axios.delete("/api/animals/" + id);
+  getCharity: function() {
+    return axios.get("api/charity");
   }
 };
+
 
