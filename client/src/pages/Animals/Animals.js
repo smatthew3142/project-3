@@ -23,7 +23,7 @@ class Animals extends Component {
     let { searchTerm } = query;
 
 
-    let queryURL = `http://eol.org/api/search/1.0.json?q=`;
+    let queryURL = `//eol.org/api/search/1.0.json?q=`;
 
     if (searchTerm.indexOf(' ') >= 0) {
       searchTerm = searchTerm.replace(/\s/g, '+');
