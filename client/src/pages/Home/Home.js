@@ -43,7 +43,7 @@ const Start = () =>
           </Col>
         </Row>
         <Row>
-        <a href='/animals'><Button waves='light' type="button" className="startSearch brown darken-3">Start Your Search</Button></a>
+        <a href='/endangered'><Button waves='light' type="button" className="startSearch brown darken-3">Discover Endangered Animals</Button></a>
         </Row>
 
   </Row>

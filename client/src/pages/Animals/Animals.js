@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
 import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
 import { CardPanel } from "react-materialize";
-import { Animal } from "../../components/Animal";
+
 
 
 class Animals extends Component {
   state = {
     searchTerm: '',
-  results: [],
-  info: [],
+    results: [],
+    info: [],
     previousSearch: {},
     noneFound: false,
     savedAnimals: []
@@ -34,15 +34,23 @@ class Animals extends Component {
     }
 
     fetch(queryURL)
-      .then(function (res) {
-        return res.json();
-      })
+      .then(results => results.json())
+      
       .then(function (json) {
         console.log(json);
       })
+
+      .then(results => {
+
+        this.setState({
+        animalData: results
+        })
+      })
+
       .catch(function (err) {
         console.log(err);
-      });
+      }); 
+
   };
 
     handleInputChange = event => {
@@ -92,22 +100,17 @@ class Animals extends Component {
               (<h1>Sorry. No animals here!</h1>) :
               this.state.results.length>0 ? (
                 <Row>
-                  <CardPanel className="grey darken-1">
-                    <h4 className="white-text">Results</h4>
+                  <CardPanel className="brown darken-1">
+                    <h4>Results</h4>
 
                     {
-                      this.state.results.map((animal, i) => (
-                          <Animal
-         
-                          />
+                      this.state.results.map((animalData, i) => (
+
+                          <h2>this.state.animalData.results</h2>
                         )
                       )
                     }
                     </CardPanel>
-
-                    <div className="moreButton" style={{margin: "0 auto", width: "180px"}}>
-                      <FormBtn additional='btn-block' onClick={this.moreArticles}>See More</FormBtn>
-                    </div>
                 </Row>
               ) : ''
             }
