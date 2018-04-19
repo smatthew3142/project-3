@@ -35,6 +35,7 @@ class Welcome extends Component {
     const { redirect } = this.state
 
     if(redirect) {
+      //rediect to the home page
       return (<Redirect to={'/'}/>)
 
     }
@@ -42,6 +43,7 @@ class Welcome extends Component {
 
     const responseGoogle = (response) => {
       console.log("google console");
+      //shows the user info
       console.log(response);
       this.signup(response, 'google');
     }
