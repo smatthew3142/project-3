@@ -36,7 +36,7 @@ const charitySeed = [
   {
     title:"The Marine Mammal Center",
     commonName:["Seals","Guadalupe fur seal","bearded Seal","Hawaiian monk seal","Ringed Seal","Spotted Seal","Ringed seal","Ringed Seal","Southern sea otter","Northern Sea Otter","Common Bottlenose Dolphin"],
-    imageLink: "//www.marinemammalcenter.org/assets/images/logo.png",
+    imageLink: "https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/52c788304c7941d39f42785ac287f99b/New%20TMMC_Horiz_1PMS.jpg",
     link: "https://www.marinemammalcenter.org/"
   },
   {
@@ -60,7 +60,7 @@ const charitySeed = [
   {
     title:"WildAid",
     commonName:["African Lion","Lion","Sumatran Elephant","Asian Elephant","Borneo Pygmy Elephant","Sri Lankan Elephant","African Elephant","Forest Elephant","Savanna Elephant","Elephant","Sumatran Elephant","Black Rhino","Javan Rhino","Sumatran Rhino","White Rhino","Rhino","Greater One-Horned Rhino","Malayan Tiger","South China Tiger","Sumatran Tiger","Amur Tiger","Bengal Tiger","Indochinese Tiger","Tiger","Pangolin","Shark","Whale Shark","Scalloped Hammerhead Shark","Great White Shark","Vaquita","Reef Manta Ray","Giant Manta Ray"],
-    imageLink: "//oneday.wpengine.netdna-cdn.com/wp-content/uploads/wildaid-logo.png",
+    imageLink: "http://thewildlifeconnection.org/wp-content/uploads/2016/03/WildAid-Black-on-White-300x85.jpg",
     link: "https://wildaid.org/"
   },
   {
