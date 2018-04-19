@@ -29,7 +29,7 @@ This app allows users to search for animals to check endangered status, discover
 - [**Divya Ayikkara**](https://github.com/divyaayikkara9497)
 - [**John Joyce**](https://github.com/jjoyce88)
 - [**Lucy Mashas**](https://github.com/lucymashas)
-- Sarika Matthew
+- [**Sarika Matthew**](https://github.com/smatthew3142/)
 
 ## Instructors
 - John Dougherty
