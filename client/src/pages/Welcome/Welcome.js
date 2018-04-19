@@ -36,7 +36,10 @@ class Welcome extends Component {
 
     if(redirect) {
       return (<Redirect to={'/'}/>)
+
     }
+
+
     const responseGoogle = (response) => {
       console.log("google console");
       console.log(response);
@@ -45,9 +48,7 @@ class Welcome extends Component {
 
     return ( 
 
-        <CardPanel className="grey lighten-3">
-
-        <div>
+        <CardPanel className="grey lighten-3" textClassName='black-text' title="Login Page">
         <GoogleLogin
         clientId="671498025717-e6e16ts71e3448u0pf3moahhg2g0ngpa.apps.googleusercontent.com"
         buttonText="Login with Google"
