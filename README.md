@@ -26,9 +26,9 @@ This app allows users to search for animals to check endangered status, discover
 - Mongoose/MongoDB
 
 ## Authors
-- Divya Ayikkara
-- John Joyce
-- Lucy Mashas
+- [**Divya Ayikkara**](https://github.com/divyaayikkara9497)
+- [**John Joyce**](https://github.com/jjoyce88)
+- [**Lucy Mashas**](https://github.com/lucymashas)
 - Sarika Matthew
 
 ## Instructors
