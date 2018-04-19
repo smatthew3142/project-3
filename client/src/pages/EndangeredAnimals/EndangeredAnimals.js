@@ -27,7 +27,7 @@ render() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-6 sm-12">
+         <Col l={12}>
             <h2>Endangered Animals List</h2>
           {this.state.animalsArr.length ? (
             <List>
