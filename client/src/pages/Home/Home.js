@@ -1,19 +1,53 @@
-import React from 'react';
+import React from "react";
 import { Col, Row, Container } from "react-materialize";
-//import {Redirect} from 'react-router-dom';
+import { Button } from "react-materialize";
+import "./Home.css";
 
-const Home = () =>
-  <Container fluid className="mainContent">
-    <Row>
-      <Col l={12}>
 
-    
-          <h1 className="notFound">404: Hello!</h1>
-          
 
-      </Col>
-    </Row>
-   
-  </Container>;
+const Start = () =>
 
-export default Home;
+
+<Container fluid>
+  <Row>
+   <Row className = 'slider fullscreen' style={{zIndex: "-100"}}>
+       <Col>
+        <div className="mainContent">
+              <ul className = 'slides'>
+                <li>
+                  <img src="/assets/images/tiger.jpg"  alt="tiger"/> 
+                </li>
+                <li>
+                  <img src="/assets/images/turtle.jpg"  alt="turtle"/> 
+                </li>
+                <li>
+                  <img src="/assets/images/wolf.jpg"  alt="wolf"/> 
+                </li>
+                <li>
+                  <img src="/assets/images/polarbear.jpg"  alt="polarbear" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/elephant.jpg"  alt="elephant" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/macaw.jpg"  alt="macaw" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/dolphin.jpg"  alt="dolphin" /> 
+                </li>
+                <li>
+                  <img src="/assets/images/rhino.jpg"  alt="rhino" /> 
+                </li>
+              </ul>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+        <a href='/animals'><Button waves='light' type="button" className="startSearch brown darken-3">Start Your Search</Button></a>
+        </Row>
+
+  </Row>
+	</Container>;
+
+
+export default Start;

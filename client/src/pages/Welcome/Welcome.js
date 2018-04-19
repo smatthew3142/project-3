@@ -14,7 +14,7 @@ class Welcome extends Component {
   }
 
   signup(res, type) {
-  	let postData;
+    let postData;
     if (type === 'google' && res.w3.U3) {
       postData = {
         name: res.w3.ig,
@@ -31,33 +31,33 @@ class Welcome extends Component {
 
 }
 
-	render() {
-		const { redirect } = this.state
+  render() {
+    const { redirect } = this.state
 
-		if(redirect) {
-			return (<Redirect to={'/home'}/>)
-		}
-		const responseGoogle = (response) => {
-			console.log("google console");
-			console.log(response);
-			this.signup(response, 'google');
-		}
+    if(redirect) {
+      return (<Redirect to={'/'}/>)
+    }
+    const responseGoogle = (response) => {
+      console.log("google console");
+      console.log(response);
+      this.signup(response, 'google');
+    }
 
-		return ( 
+    return ( 
 
-			  <CardPanel className="grey lighten-3">
+        <CardPanel className="grey lighten-3">
 
-			  <div>
-				<GoogleLogin
-				clientId="671498025717-e6e16ts71e3448u0pf3moahhg2g0ngpa.apps.googleusercontent.com"
-				buttonText="Login with Google"
-              	onSuccess={responseGoogle}
-              	onFailure={responseGoogle}/>
-			</div>
-			</CardPanel>
+        <div>
+        <GoogleLogin
+        clientId="671498025717-e6e16ts71e3448u0pf3moahhg2g0ngpa.apps.googleusercontent.com"
+        buttonText="Login with Google"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}/>
+      </div>
+      </CardPanel>
 
-		);
-	}
+    );
+  }
 }
 
 
