@@ -29,26 +29,26 @@ const charitySeed = [
   {
     title: "EcoHealth Alliance",
     commonName: ["Poison Dart Frog","California red-legged frog","Chiricahua leopard frog","Sierra Nevada Yellow-legged Frog","Mountain yellow-legged frog","dusky gopher frog","Oregon spotted frog","Ozark big-eared bat","Virginia big-eared bat","Pacific sheath-tailed Bat","Florida bonneted bat","Hawaiian hoary bat","Mexican long-nosed bat","Lesser long-nosed bat","Northern Long-Eared Bat","Gray bat","Indiana bat","Little Mariana fruit Bat","Mariana fruit Bat"],
-    imageLink: "https://www.ecohealthalliance.org/",
+    imageLink: "//www.esw.org/sites/default/files/eha-logo.png",
     link: "https://www.ecohealthalliance.org/"
   },
 
   {
     title:"The Marine Mammal Center",
     commonName:["Seals","Guadalupe fur seal","bearded Seal","Hawaiian monk seal","Ringed Seal","Spotted Seal","Ringed seal","Ringed Seal","Southern sea otter","Northern Sea Otter","Common Bottlenose Dolphin"],
-    imageLink: "http://www.marinemammalcenter.org/assets/images/logo.png",
-    link: "http://www.marinemammalcenter.org/"
+    imageLink: "//www.marinemammalcenter.org/assets/images/logo.png",
+    link: "https://www.marinemammalcenter.org/"
   },
   {
     title: "Ruffed Grouse Society",
     commonName: ["Greater Sage-Grouse","Gunnison sage-grouse","Ruffed Grouse"],
-    imageLink: "http://www.ruffedgrousesociety.org/2014rgsbase/images/Header_logo.png",
+    imageLink: "//www.ruffedgrousesociety.org/UserFiles/Image/Logos/Logo.png",
     link: "http://www.ruffedgrousesociety.org/"
   },
   {
     title: "The Jane Goodall Institute",
     commonName:["Chimpanzee"],
-    imageLink: "http://www.janegoodall.org/",
+    imageLink: "https://www.chasingcoral.com/wp-content/uploads/2018/01/jane-goodall-institute.png",
     link: "http://www.janegoodall.org/"
   },
   {
@@ -60,7 +60,7 @@ const charitySeed = [
   {
     title:"WildAid",
     commonName:["African Lion","Lion","Sumatran Elephant","Asian Elephant","Borneo Pygmy Elephant","Sri Lankan Elephant","African Elephant","Forest Elephant","Savanna Elephant","Elephant","Sumatran Elephant","Black Rhino","Javan Rhino","Sumatran Rhino","White Rhino","Rhino","Greater One-Horned Rhino","Malayan Tiger","South China Tiger","Sumatran Tiger","Amur Tiger","Bengal Tiger","Indochinese Tiger","Tiger","Pangolin","Shark","Whale Shark","Scalloped Hammerhead Shark","Great White Shark","Vaquita","Reef Manta Ray","Giant Manta Ray"],
-    imageLink: "https://wildaid.org/wp-content/themes/wildaidtheme/svgs/wildaid-logo-white.svg",
+    imageLink: "//oneday.wpengine.netdna-cdn.com/wp-content/uploads/wildaid-logo.png",
     link: "https://wildaid.org/"
   },
   {
@@ -90,6 +90,7 @@ const charitySeed = [
   {
     title:"PAWS",
     commonName:["Canada Lynx","Puma","Jaguar","Gray wolf","Mexican wolf","Red wolf","Swift Fox","Santa Catalina Island Fox","San Joaquin kit fox","Brown Bear","Grizzly bear","Columbian white-tailed deer","Key deer","Plains Bison","Wood Bison","Columbia Basin Pygmy Rabbit","Lower Keys marsh rabbit","Riparian brush rabbit","Tenino pocket gopher","Olympia pocket gopher","Yelm pocket gopher","Roy Prairie pocket gopher","Utah prairie dog"],
+    imageLink:"https://grassroots.groupon.com/files/2011/05/paws-seattle-logo-v2.jpg",
     link: "https://www.paws.org/"
   },
   {
