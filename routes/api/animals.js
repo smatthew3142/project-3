@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const ecosController = require("../../controllers/ecos");
 const animalsController = require("../../controllers/animalsController");
 
 
 // Calling the scrape route
+
 
 router
   .route("/")
@@ -17,9 +17,7 @@ router
   .delete(animalsController.remove);
 
 
-  router
-  .route("/scrape")
-  .get(ecosController.scrape);
+
 
 
 

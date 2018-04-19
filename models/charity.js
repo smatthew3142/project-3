@@ -6,9 +6,15 @@ const charitySchema = new Schema({
     type: String,
     Required: true
   },
-
   commonName: { 
     type: Array
+   },
+   imageLink:{
+     type: String,
+   },
+   link: {
+      type: String,
+      Required: true
     }
 
 });

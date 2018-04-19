@@ -3,13 +3,40 @@ import {Redirect} from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import { CardPanel } from "react-materialize";
 
+
 class Welcome extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      redirect: false
+    };
+    this.signup = this.signup.bind(this);
+  }
+
+  signup(res, type) {
+  	let postData;
+    if (type === 'google' && res.w3.U3) {
+      postData = {
+        name: res.w3.ig,
+        provider: type,
+        email: res.w3.U3,
+        provider_id: res.El,
+        token: res.Zi.access_token,
+        provider_pic: res.w3.Paa
+      };
+      console.log(postData);
+      this.setState({redirect: true});
+  }
 
 
-
+}
 
 	render() {
+		const { redirect } = this.state
 
+		if(redirect) {
+			return (<Redirect to={'/home'}/>)
+		}
 		const responseGoogle = (response) => {
 			console.log("google console");
 			console.log(response);

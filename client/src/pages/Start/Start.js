@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Row, Container } from "react-materialize";
-import Search from "../../components/Search";
+import { Button } from "react-materialize";
+import "./Start.css";
+
 
 
 const Start = () =>
@@ -40,9 +42,9 @@ const Start = () =>
             </div>
           </Col>
         </Row>
-      <Row>
-          <Search/>
-      </Row>
+        <Row>
+        <a href='/animals'><Button waves='light' type="button" className="startSearch brown darken-3">Start Your Search</Button></a>
+        </Row>
 
   </Row>
 	</Container>;

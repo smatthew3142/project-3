@@ -1,68 +1,121 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "react-materialize";
-import API from "../../utils/API";
-import { List } from "../../components/List";
-import SearchResults from "../../components/SearchResults";
+import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
+import { CardPanel } from "react-materialize";
+import { Animal } from "../../components/Animal";
+
 
 class Animals extends Component {
-  constructor (props){
-    super (props)
-       this.state = {
-          animalsArr: [],
-          charities: []
-      };
-    this.handleDonate = this.handleDonate.bind(this);
- };
-
-  componentDidMount() {
-    this.loadAnimals();
-  }
-
-  loadAnimals = () => {
-    API.getAnimals()
-      .then(res => this.setState({ animalsArr: res.data }))
-      .catch(err => console.log(err));
+  state = {
+    searchTerm: '',
+  results: [],
+  info: [],
+    previousSearch: {},
+    noneFound: false,
+    savedAnimals: []
   };
-  handleDonate = id => {
-    const commonName = this.state.animalsArr.find(animal => animal._id === id);
-    console.log(commonName);
-    API.getCharity(commonName)
-    .then(res => this.setState({charities: res.data}))
-    .catch(err => console.log(err));
-    console.log(this.charities);
-};
 
 
-render() {
-  return (
-    <Container fluid>
-      <Row>
-        <Col size="md-6 sm-12">
-            <h2>Animals In the List</h2>
-          {this.state.animalsArr.length ? (
-            <List>
-              {this.state.animalsArr.slice(0, 5).map(animal => (
-                <SearchResults
-                       key={animal._id} 
-                       _id={animal._id}
-                       link={animal.link}
-                       scientificName={animal.scientificName}
-                       commonName={animal.commonName}
-                       status={animal.status}
-                       handleDonate = {this.handleDonate}
-                       buttonText = "Donate" 
-                    />
-                ))}
-            </List>
-          ) : (
-            <h3>No Results to Display</h3>
-          )};
+  getAnimals = (query) => {
+    if (query.searchTerm !== this.state.previousSearch.searchTerm) {
+      this.setState({ results: [] });
+    }
+    let { searchTerm } = query;
 
-        </Col>
-      </Row>
-    </Container>
-  );
+
+    let queryURL = `http://eol.org/api/search/1.0.json?q=`;
+
+    if (searchTerm.indexOf(' ') >= 0) {
+      searchTerm = searchTerm.replace(/\s/g, '+');
+    }
+
+    if (searchTerm) {
+      queryURL += searchTerm + '&page=1';
+    }
+
+    fetch(queryURL)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (json) {
+        console.log(json);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  };
+
+    handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+        event.preventDefault();
+        let { searchTerm } = this.state;
+        let query = { searchTerm };
+        this.getAnimals(query);
+    };
+
+    render() {
+      return (
+        <Container fluid>
+          <Row>
+            <Col size="md-6 sm-12">
+            <Form>
+              <FormGroup>
+                <Label htmlFor="searchTerm">Enter a Keyword:</Label>
+                <Input
+                onChange={this.handleInputChange}
+                name='searchTerm'
+                value={this.state.searchTerm}
+                placeholder='Search'
+                />
+              </FormGroup>
+  
+              <FormBtn
+                className="submitButton"
+                disabled={!(this.state.searchTerm)}
+                onClick={this.handleFormSubmit}
+                type='info'
+                >Submit
+              </FormBtn>
+            </Form>
+          </Col>
+        </Row>
+        <Row>
+            <Col l={12}>
+
+            { this.state.noAnimals ?
+              (<h1>Sorry. No animals here!</h1>) :
+              this.state.results.length>0 ? (
+                <Row>
+                  <CardPanel className="grey darken-1">
+                    <h4 className="white-text">Results</h4>
+
+                    {
+                      this.state.results.map((animal, i) => (
+                          <Animal
+         
+                          />
+                        )
+                      )
+                    }
+                    </CardPanel>
+
+                    <div className="moreButton" style={{margin: "0 auto", width: "180px"}}>
+                      <FormBtn additional='btn-block' onClick={this.moreArticles}>See More</FormBtn>
+                    </div>
+                </Row>
+              ) : ''
+            }
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
 }
-};
-export default Animals;
 
+  export default Animals;

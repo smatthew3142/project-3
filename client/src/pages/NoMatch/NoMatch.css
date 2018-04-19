@@ -1,14 +1,10 @@
-h1 {
+h1.notFound {
 	font-family: 'Trade Winds', cursive;
 	font-size: 48px !important;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.3);
 	text-align: center;
+	color: #4e342e;
 }
 
-body {
-
-	background-image: url("/assets/images/antelope.jpg");
-	background-repeat: no-repeat;
-	 background-size: cover;
+.antelope{
+  max-width: 100%;
 }
