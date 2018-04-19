@@ -37,7 +37,7 @@ import "./charity.css";
                 <ListItem>
                       <div className="imgStyle"><img className="charityLogo" alt="logo" src={Charity.imageLink}/></div>
                       <p>{Charity.title} <br />
-                      <a href = {Charity.link}>Click Here to Donate</a> <br/> </p>
+                      <a href = {Charity.link} target="_blank">Click Here to Donate</a> <br/> </p>
                       <p>This Organization supports the following Endangered Species:<br/>  
                          {Charity.commonName.reduce((prev, curr) => [prev, ", ", curr])}</p>
                 </ListItem>
